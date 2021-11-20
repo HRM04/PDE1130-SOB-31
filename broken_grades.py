@@ -24,14 +24,15 @@ exam_one = int(input("Input exam grade one: ")))
 
 exam_two = int(input("Input exam grade two: ")))
 
-exam_3 = int(input("Input exam grade three: "))
+exam_three = int(input("Input exam grade three: "))
 
-grades = [exam_one exam_two exam_three]
-sum = 0
+grades = [exam_one, exam_two, exam_three]
+
+sum_of_grades = 0
 for grade in grade:
-  sum = sum + grade
+  sum_of_grades += grade
 
-avg = sum / len(grdes)
+avg = sum_of_grades / len(grdes)
 
 if avg >= 90:
     letter_grade = "A"
