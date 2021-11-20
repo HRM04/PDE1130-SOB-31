@@ -15,8 +15,22 @@ print("For every number that exists in the sequence but is in wrong place, you g
 print("The game ends when you get 4 bulls!")
 print("Type exit at any prompt to exit.")
 
+
+def compare_numbers(num,guess):
+    bulls=0
+    cows=0
+    for i in range(len(num)):
+        if guess[i] == num[i]:
+            bulls+=1
+        else:
+            for j in range(len(guess)):
+                if guess[i]==num[i]:
+                    cows+=1
+                    print(cows,i)
+    return cows,bulls
+
 while playing:
-    user_guess = input("Give me your best guess!")
+    user_guess = str(input("Give me your best guess!"))
     if user_guess == "exit":
         break
     cowbullcount = compare_numbers(number,user_guess)
