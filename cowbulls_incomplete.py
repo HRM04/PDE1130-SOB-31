@@ -7,7 +7,6 @@ def compare_numbers(number, user_guess):
 playing = True #gotta play the game
 number = str(random.randint(1000,9999)) #random 4 digit number
 guesses = 0
-print (number)
 
 print("Let's play a game of Cowbull!") #explanation
 print("I will generate a number, and you have to guess the numbers one digit at a time.")
@@ -24,7 +23,7 @@ def compare_numbers(num,guess):
             bulls+=1
         else:
             for j in range(len(guess)):
-                if guess[i]==num[i]:
+                if guess[i]==num[j]:
                     cows+=1
                     print(cows,i)
     return cows,bulls
@@ -40,8 +39,8 @@ while playing:
 
     if cowbullcount[1]==4:
         playing = False
-        print("You win the game after " + str(guesses) + "! The number was "+str(number))
-        break #redundant exit
+        print("You win the game after " + str(guesses) + "guesses! The number was "+str(number))
+    
     else:
         print("Your guess isn't quite right, try again.")
 
